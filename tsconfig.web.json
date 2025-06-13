@@ -1,0 +1,21 @@
+{
+  "extends": "@electron-toolkit/tsconfig/tsconfig.web.json",
+  "include": [
+    "src/renderer/src/env.d.ts",
+    "src/renderer/src/**/*",
+    "src/renderer/src/**/*.vue",
+    "src/preload/*.d.ts",
+    "src/types/*.d.ts"
+  ],
+  "compilerOptions": {
+    "composite": true,
+    "noUnusedLocals": false, // 允许未使用的局部变量
+    "noUnusedParameters": false, // 允许未使用的函数参数
+    "baseUrl": ".",
+    "paths": {
+      "@renderer/*": [
+        "src/renderer/src/*"
+      ]
+    },
+  }
+}

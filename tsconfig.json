@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".", // 项目根目录
+    "paths": {
+      "@/*": [
+        "src/*"
+      ],
+      "@renderer/*": [
+        "src/renderer/src/*"
+      ]
+    }, // 解决vscode警告提示问题
+  },
+  "exclude": [
+    "node_modules", // 排除第三方库
+    "dist" // 排除打包后的文件夹
+  ],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    },
+    {
+      "path": "./tsconfig.web.json"
+    }
+  ],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue"  // 确保包含 .vue 文件
+  ]
+}

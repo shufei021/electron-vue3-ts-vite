@@ -1,0 +1,25 @@
+{
+  "extends": "@electron-toolkit/tsconfig/tsconfig.node.json",
+  "include": [
+    "electron.vite.config.*",
+    "src/main/**/*",
+    "src/preload/**/*",
+    "src/utils/**/*",
+    "src/**/*"
+  ],
+  "compilerOptions": {
+    "composite": true,
+    "types": [
+      "electron-vite/node"
+    ],
+    "noUnusedLocals": false, // 允许未使用的局部变量
+    "noUnusedParameters": false, // 允许未使用的函数参数
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ], // 映射 @ 到 src 目录
+    },
+  }
+}
+
